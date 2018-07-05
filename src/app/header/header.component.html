@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #563d7c">
+  <a class="navbar-brand px-0" routerLink="/">{{'brand' | translate}}</a>
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent"
+    aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" [ngClass]="{'collapse': isCollapsed}" id="navbarContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" *ngFor="let header of headers">
+        <a class="nav-link text-white" [routerLinkActive]="['active-tab']" [routerLink]="[header.path]">{{header.name | translate}}</a>
+      </li>
+    </ul>
+    <span class="float-right">
+      <select (change)="changeLang($event.target.value)" class="custom-select py-0">
+        <option *ngFor="let lang of languages" [value]="lang.code">{{ lang.name }}</option>
+      </select>
+    </span>
+  </div>
+</nav>

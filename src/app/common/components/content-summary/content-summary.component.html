@@ -1,0 +1,18 @@
+<div class="card-header text-white bg-success py-0 px-0 rounded-0">
+  <h5 class="float-xs-right">{{header | translate}}</h5>
+</div>
+<div class="p-1"></div>
+<div *ngIf="!showMoreLink">
+  <div class="list-group" *ngFor="let story of content_array">
+    <a [routerLink]="['/content',story.id]" [queryParams]="{type: story.type}" class="list-group-item borderless px-0">{{story.link_thumbnail | translate}}</a>
+  </div>
+</div>
+<div *ngIf="showMoreLink">
+  <div class="list-group" *ngFor="let story of content_array | arrayslice">
+    <a [routerLink]="['/content',story.id]" [queryParams]="{type: story.type}" class="list-group-item borderless px-0">{{story.link_thumbnail | translate}}</a>
+  </div>
+</div>
+
+<span class="float-right" *ngIf="showMoreLink">
+  <a [routerLink]="[moreLinkNavPath]">{{'more_link' | translate}}>></a>
+</span>

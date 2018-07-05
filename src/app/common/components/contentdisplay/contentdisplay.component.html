@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a class="breadcrumb-item" routerLink="/home">home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a class="breadcrumb-item active" [routerLink]="path_trace.current_path">{{ path_trace.curret_path_name | translate}}</a>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <h4 class="page-header">{{content.page_header | translate}}</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <img [src]="content.image" class="img-fluid" style="width: 100%; height: auto;">
+            </div>
+            <div class="col-md-12">
+                <p>{{content.article | translate}}</p>
+            </div>
+        </div>
+    </div>
+</div>

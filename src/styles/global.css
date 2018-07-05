@@ -1,0 +1,48 @@
+/* body {
+  font-family: 'Roboto-Regular';
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+} */
+body.te {
+  font-family: 'dhurjati';
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'dhurjati';
+  src: url('/assets/fonts/dhurjati') format('ttf');
+  /* font-weight: normal;
+  font-style: normal; */
+}
+
+.active-tab {
+    color: white;
+    border-radius: 0px;
+    text-decoration: none;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-left-radius: -3px;
+    border-bottom-right-radius: -3px;
+    padding-bottom: 0px;
+  }
+
+  .list-group > .borderless {
+    border-left: 0 none;
+    border-top: 0 none;
+    border-right: 0 none;
+  }
+
+  .navbar-brand {
+    padding-left: 0px;
+  }
+
+  @media screen and (max-width: 750px){
+    .navbar-collapse {
+      position: relative;
+      z-index: 999;
+      height: 100%;
+      width: 100%;
+    }
+  }

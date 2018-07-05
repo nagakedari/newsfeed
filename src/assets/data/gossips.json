@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "link_thumbnail":"gossip_story_link_thumbnail_1",
+        "content": {
+            "page_header": "page_header_1",
+            "image": "",
+            "article": "article_1"
+        },
+        "type": "gossip"
+    },
+    {
+        "id": 2,
+        "link_thumbnail":"gossip_story_link_thumbnail_2",
+        "content": {
+            "page_header": "page_header_2",
+            "image": "",
+            "article": "article_2"
+        },
+        "type": "gossip"
+    },
+    {
+        "id": 3,
+        "link_thumbnail":"gossip_story_link_thumbnail_3",
+        "content": {
+            "page_header": "page_header_3",
+            "image": "",
+            "article": "article_3"
+        },
+        "type": "gossip"
+    },
+    {
+        "id": 4,
+        "link_thumbnail":"gossip_story_link_thumbnail_4",
+        "content": {
+            "page_header": "page_header_4",
+            "image": "",
+            "article": "article_4"
+        },
+        "type": "gossip"
+    },
+    {
+        "id": 5,
+        "link_thumbnail":"gossip_story_link_thumbnail_5",
+        "content": {
+            "page_header": "page_header_5",
+            "image": "",
+            "article": "article_5"
+        },
+        "type": "gossip"
+    },
+    {
+        "id": 6,
+        "link_thumbnail":"gossip_story_link_thumbnail_6",
+        "content": {
+            "page_header": "page_header_6",
+            "image": "",
+            "article": "article_6"
+        },
+        "type": "gossip"
+    },
+    {
+        "id": 7,
+        "link_thumbnail":"gossip_story_link_thumbnail_7",
+        "content": {
+            "page_header": "page_header_7",
+            "image": "",
+            "article": "article_7"
+        },
+        "type": "gossip"
+    },
+    {
+        "id": 8,
+        "link_thumbnail":"gossip_story_link_thumbnail_8",
+        "content": {
+            "page_header": "page_header_8",
+            "image": "",
+            "article": "article_8"
+        },
+        "type": "gossip"
+    },
+    {
+        "id": 9,
+        "link_thumbnail":"gossip_story_link_thumbnail_9",
+        "content": {
+            "page_header": "page_header_9",
+            "image": "",
+            "article": "article_9"
+        },
+        "type": "gossip"
+    },
+    {
+        "id": 10,
+        "link_thumbnail":"gossip_story_link_thumbnail_10",
+        "content": {
+            "page_header": "page_header_10",
+            "image": "",
+            "article": "article_10"
+        },
+        "type": "gossip"
+    }
+]

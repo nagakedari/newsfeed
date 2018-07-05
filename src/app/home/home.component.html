@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card-header text-white bg-success py-0 px-0 rounded-0">
+      <h5>{{'special' | translate}}</h5>
+    </div>
+    <div class="p-1"></div>
+    <div class="card-title borderless">
+      <div class="list-group">
+        <img [src]="special_story.content.image" class="img-fluid" style="width: 100%; height: auto;" />
+        <a class="list-group-item borderless px-0" [routerLink]="['/content',special_story.id]" [queryParams]="{type: special_story.type}">{{special_story.link_thumbnail | translate}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="p-2"></div>
+<div class="row">
+  <div class="col-md-6">
+    <app-content-summary [header]="'top'" [content_array]="top_stories"></app-content-summary>
+  </div>
+  <div class="col-md-6">
+    <app-content-summary [moreLinkNavPath]="'/news'" [header]="'political'" [content_array]="news"></app-content-summary>
+  </div>
+</div>
+<div class="p-2"></div>
+<div class="row">
+  <div class="col-md-6">
+    <app-content-summary [moreLinkNavPath]="'/cinema'" [header]="'cinema_header'" [content_array]="cinema"></app-content-summary>
+  </div>
+  <div class="col-md-6">
+    <app-content-summary [moreLinkNavPath]="'/gossips'" [header]="'gossip_header'" [content_array]="gossips"></app-content-summary>
+  </div>
+</div>
+<div class="p-2"></div>

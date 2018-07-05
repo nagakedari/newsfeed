@@ -1,0 +1,11 @@
+{
+    "Home": "Home",
+    "News": "News",
+    "Cinema": "Cinema",
+    "Gossips": "Gossips",
+    "language": {
+        "dafault": "Language",
+        "en": "English",
+        "te": "Telugu"
+    }
+}

@@ -1,0 +1,18 @@
+ [
+        {
+            "name": "Home",
+            "path": "home"
+        },
+        {
+            "name": "News",
+            "path": "news"
+        },
+        {
+            "name": "Cinema",
+            "path": "cinema"
+        },
+        {
+            "name": "Gossips",
+            "path": "gossips"
+        }
+]

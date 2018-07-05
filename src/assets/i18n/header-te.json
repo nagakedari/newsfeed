@@ -1,0 +1,11 @@
+{
+    "Home": "హోమ్",
+    "News": "వార్తలు",
+    "Cinema": "సినిమా",
+    "Gossips": "గాసిప్స్",
+    "language": {
+        "dafault": "Language",
+        "en": "English",
+        "te": "Telugu"
+    }
+}
