@@ -24,6 +24,7 @@ import { ContentSummaryComponent } from './common/components/content-summary/con
 import { ArraySlicePipe } from './common/pipes/array-slice.pipe';
 import { SlicePipe } from '@angular/common';
 import { AwsService } from './common/services/aws.service';
+import { JsonPipe } from './common/pipes/json.pipe';
 
 export function translateLoader(_http: HttpClient) {``
   return new MultiTranslateHttpLoader(_http, [
@@ -75,7 +76,8 @@ export function load_data_json(_sharedService: SharedService) {
     HeaderComponent,
     ContentdisplayComponent,
     ContentSummaryComponent,
-    ArraySlicePipe
+    ArraySlicePipe,
+    JsonPipe
   ],
   imports: [
     BrowserModule,

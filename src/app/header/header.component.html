@@ -12,7 +12,7 @@
     </ul>
     <span class="float-right">
       <select (change)="changeLang($event.target.value)" class="custom-select py-0">
-        <option *ngFor="let lang of languages" [value]="lang.code">{{ lang.name }}</option>
+        <option *ngFor="let lang of languages" [value]="lang.code">{{ lang.name | translate }}</option>
       </select>
     </span>
   </div>

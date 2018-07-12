@@ -4,5 +4,9 @@
     "top": "Top Stories",
     "political": "Political",
     "cinema_header": "Cinema",
-    "gossip_header": "Gossips"
+    "gossip_header": "Gossips",
+    "home": "home",
+    "more_link": "more",
+    "English": "English",
+    "Telugu": "Telugu"
 }
