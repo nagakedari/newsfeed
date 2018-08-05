@@ -13,4 +13,8 @@ export class ApiproxyService {
     return this.http.get<any[]>(this.url+data_json);
   }
 
+  public getFileFromS3(url: string) : Observable<any[]> {
+    return this.http.get<any[]>(url);
+  }
+
 }

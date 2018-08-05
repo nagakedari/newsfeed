@@ -23,25 +23,25 @@ import { JSON } from './common/utility/app-contants';
 import { ContentSummaryComponent } from './common/components/content-summary/content-summary.component';
 import { ArraySlicePipe } from './common/pipes/array-slice.pipe';
 import { SlicePipe } from '@angular/common';
-import { AwsService } from './common/services/aws.service';
 import { JsonPipe } from './common/pipes/json.pipe';
+import { create } from 'domain';
 
-export function translateLoader(_http: HttpClient) {``
+export function translateLoader(_http: HttpClient) {
   return new MultiTranslateHttpLoader(_http, [
-      {prefix:'./assets/i18n/', suffix: JSON},
-      {prefix:'./assets/i18n/header-', suffix: JSON},
-      {prefix:'./assets/i18n/special-story-', suffix: JSON},
-      {prefix:'./assets/i18n/top-stories-', suffix: JSON},
-      {prefix:'./assets/i18n/news-', suffix: JSON},
-      {prefix:'./assets/i18n/cinema-', suffix: JSON},
-      {prefix:'./assets/i18n/gossips-', suffix: JSON}
+    { prefix: '', suffix: JSON },
+    { prefix: 'header-', suffix: JSON },
+    { prefix: 'special-story-', suffix: JSON },
+    { prefix: 'top-stories-', suffix: JSON },
+    { prefix: 'news-', suffix: JSON },
+    { prefix: 'cinema-', suffix: JSON },
+    { prefix: 'gossips-', suffix: JSON }
   ]);
 }
 
 @Injectable()
 export class MultiTranslateHttpLoader implements TranslateLoader {
   constructor(private _http: HttpClient, public resources: { prefix: string, suffix: string }[] = [{
-    prefix: '/assets/i18n/',
+    prefix: '',
     suffix: JSON
   }]) { }
 
@@ -53,7 +53,8 @@ export class MultiTranslateHttpLoader implements TranslateLoader {
   public getTranslation(lang: string): any {
 
     return Observable.forkJoin(this.resources.map(config => {
-      return this._http.get(`${config.prefix}${lang}${config.suffix}`);
+      let url = 'http://localhost:3000/content?file_name='+`${config.prefix}${lang}${config.suffix}`;
+      return this._http.get(url);
     })).map(response => {
       return response.reduce((a, b) => {
         return Object.assign(a, b);
@@ -98,8 +99,7 @@ export function load_data_json(_sharedService: SharedService) {
       useFactory: load_data_json,
       deps: [SharedService],
       multi: true
-    }, SlicePipe,
-    AwsService
+    }, SlicePipe
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,3 @@
-import * as AWS from 'aws-sdk/global';
-import * as S3 from 'aws-sdk/clients/s3';
-
 const NO_PATH = '';
 const SLASH = '/';
 const HOME_PATH = "home";
@@ -23,12 +20,6 @@ const NEWS_JSON = "news" + JSON;
 const CINEMA_JSON = "cinema" + JSON;
 const GOSSIPS_JSON = "gossips" + JSON;
 const NO_OF_LINKS = 5;
-const REGION = '';
-const IDENTITY_POOL_ID = '';
-const BUCKET = new S3({
-});
-const S3_FLODER = 'feed-data/';
-const S3_BUCKET_NAME = 'contentjson';
 
 export {
     NO_PATH,
@@ -52,10 +43,5 @@ export {
     SPECIAL_STORY,
     POLITICAL_STORY,
     CINEMA_STORY,
-    GOSSIP_STORY,
-    BUCKET,
-    S3_FLODER,
-    S3_BUCKET_NAME,
-    REGION,
-    IDENTITY_POOL_ID
+    GOSSIP_STORY
 }
